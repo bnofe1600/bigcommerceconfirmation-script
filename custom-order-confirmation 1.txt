@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Order Confirmation</title>
+    <style>
+        /* Additional styles can be added here if needed */
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Locate the message element by its text content
+            const messageElement = document.querySelector("span");
+            if (messageElement && messageElement.textContent.includes("Your order was sent to us but is currently awaiting payment")) {
+                // Replace the old text with the new message
+                messageElement.textContent = "Your order has been successfully received, and payment authorization has been completed. Once we confirm product availability and other essential details, we will proceed to complete your payment. You will receive an email notification once this process is finalized.";
+            }
+        });
+    </script>
+</body>
+</html>
